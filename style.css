@@ -1,0 +1,143 @@
+:root {
+    --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+    --light-bg: #333;
+    --dark-bg: #f5f5f5;
+}
+
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--system-ui);
+    line-height: 1.6;
+    color: var(--light-bg);
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header */
+header {
+    display: flex;
+    flex-direction: column;
+    /*justify-content: space-between;*/
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #f5f5f5;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    width: 70%;
+    min-width: 300px;
+    max-width: 800px;
+    margin: 0 auto 1rem auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    margin: 0 auto;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a:hover {
+    color: #777;
+}
+
+/* Main content */
+main, footer {
+    padding: 50px;
+}
+
+.banner {
+    margin-bottom: 40px;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.featured-products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.featured-products article img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.about-below {
+    background-color: #f5f5f5;
+    margin-top: -20px;
+    padding-bottom: 135px;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: var(--dark-bg);
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  bottom: 0;
+  left: 0; /* Add this line */
+  width: calc(100% - 100px); /* Update this line */
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px; /* Add padding to the left */
+  padding-right: 20px; /* Add padding to the right */
+  width: 100%;
+}
+
+.footer-left img {
+    width: 100px;
+
+}
+
+.footer-right p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+  main, .footer-wrapper {
+    padding: 20px;
+  }
+
+    .footer-right {
+        margin-left: 5rem;
+    }
+
+
+
+}
