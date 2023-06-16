@@ -89,22 +89,8 @@ main {
     height: auto;
 }
 
-.banner h2 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: xx-large;
-}
-
-.rectangle {
-    background-color: rgba(245, 245, 245, 0.6);
-    width: 60%;
-    height: 60%;
-    position: absolute;
-        top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.card:target {
+    border: 2px solid red;
 }
 
 .featured-products {
