@@ -74,6 +74,7 @@ main, footer {
 
 main {
     margin-top: 100px;
+    margin-bottom: 50px;
 }
 
 .banner {
@@ -90,16 +91,21 @@ main {
 }
 
 .card:target {
-    border: 2px solid red;
+  border: 2px solid #DCB76C;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .featured-products {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
 }
 
-.featured-products article img {
+.card {
+    flex: 1 0 30%;
+}
+
+.card img {
     width: 100%;
     height: auto;
     display: block;
@@ -153,7 +159,8 @@ footer {
 
 @media (max-width: 768px) {
   main {
-    padding: 20px;;
+      padding: 20px;
+      margin-bottom: 100px;
   }
 
     .footer-right {
@@ -161,5 +168,8 @@ footer {
     }
 
 
-
+    .card {
+        flex-basis: 100%;
+        margin-bottom: 10%;
+    }
 }
