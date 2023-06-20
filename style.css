@@ -5,10 +5,10 @@
     --dark-bg: #f5f5f5;
 }
 
-
 *, ::before, ::after {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -88,6 +88,7 @@ main {
 .banner img {
     width: 100%;
     height: auto;
+    border-radius: 8px;
 }
 
 
@@ -99,13 +100,12 @@ main {
 
 .card {
     flex: 1 0 30%;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(0, 0, 0, 0.1);
-
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
 .card:target {
     border: 2px solid #DCB76C;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .card img {
@@ -132,7 +132,7 @@ footer {
   position: fixed;
   bottom: 0;
   left: 0; /* Add this line */
-  width: calc(100% - 100px); /* Update this line */
+    width: 100%;
 }
 
 .footer-wrapper {
