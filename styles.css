@@ -1,8 +1,10 @@
 :root {
     --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol";
-    --light-bg: #333;
-    --dark-bg: #f5f5f5;
+    --gray: #f5f5f5;
+    --dk-gray: #777;
+    --white: #fff;
+    --gold: #DCB76C;
 }
 
 *, ::before, ::after {
@@ -14,11 +16,6 @@
 body {
     font-family: var(--system-ui);
     line-height: 1.6;
-    color: var(--light-bg);
-}
-
-ul {
-    list-style-type: none;
 }
 
 a {
@@ -26,14 +23,14 @@ a {
     color: inherit;
 }
 
-/* Header */
+/* Header - Start*/
 header {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 20px 0;
-    background-color: #f5f5f5;
+    background-color: var(--gray);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0;
@@ -45,7 +42,6 @@ header {
     width: 70%;
     min-width: 300px;
     max-width: 800px;
-    /*margin: 0 auto 1rem auto;*/
 }
 
 nav {
@@ -58,6 +54,7 @@ nav {
 nav ul {
     display: flex;
     margin: 0 auto;
+    list-style-type: none;
 }
 
 nav ul li {
@@ -65,17 +62,15 @@ nav ul li {
 }
 
 nav ul li a:hover {
-    color: #777;
+    color: var(--dk-gray);
 }
+/* Header - End */
 
-/* Main content */
-main, footer {
-    padding: 50px;
-}
-
+/* Main Content - Start */
 main {
-    margin-top: 110px;
-    margin-bottom: 50px;
+    padding: 50px;
+    margin: 110px auto 50px auto;
+    max-width: 1280px;
 }
 
 .banner {
@@ -83,7 +78,6 @@ main {
     width: 100%;
     position: relative;
     text-align: center;
-    /*z-index: -1;*/
 }
 
 .banner img {
@@ -100,7 +94,7 @@ main {
     left: 0;
     right: 0;
     height: 25%;
-    background-color: #DCB76C;
+    background-color: var(--gold);
     opacity: 0;
     transition: opacity 0.3s ease;
     display: flex;
@@ -114,7 +108,7 @@ main {
 }
 
 .banner-btn span {
-    color: #fff;
+    color: var(--white);
     font-size: 1.2rem;
 }
 
@@ -136,7 +130,7 @@ main {
 
 
 .card:target {
-    border: 2px solid #DCB76C;
+    border: 2px solid var(--gold);
 }
 
 .card img {
@@ -147,16 +141,13 @@ main {
 }
 
 .card-lower-part {
-    background-color: #f5f5f5;
+    background-color: var(--gray);
     margin-top: -20px;
     padding: 16px;
 }
 
 .txt-bd {
     font-weight: 600;
-}
-.space-bottom {
-    padding-bottom: 26px;
 }
 
 .click-3d {
@@ -167,18 +158,19 @@ main {
 .click-3d:active {
     transform: translateY(2px) scale(0.98);
 }
+/* Main Content - End */
 
-/* Footer */
+/* Footer - Start */
 footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 50px;
-  background-color: var(--dark-bg);
-  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-  position: fixed;
-  bottom: 0;
-  left: 0; /* Add this line */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: var(--gray);
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    bottom: 0;
+    left: 0;
     width: 100%;
 }
 
@@ -186,8 +178,8 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 20px; /* Add padding to the left */
-  padding-right: 20px; /* Add padding to the right */
+  padding-left: 20px;
+  padding-right: 20px;
   width: 100%;
 }
 
@@ -204,9 +196,10 @@ footer {
 .footer-right {
     width: 80%;
     text-align: right;
-    /*margin: 0;*/
 }
+/* Footer - End */
 
+/* Mobile View */
 @media (max-width: 768px) {
   main {
       padding: 20px;
@@ -216,7 +209,6 @@ footer {
     .footer-right {
         margin-left: 5rem;
     }
-
 
     .card {
         flex-basis: 100%;
